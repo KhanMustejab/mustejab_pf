@@ -47,7 +47,7 @@ export default function Contact() {
         {/* Main Title with letter animation */}
         <motion.div
           className="mb-12"
-          variables={containerVariants}
+          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
