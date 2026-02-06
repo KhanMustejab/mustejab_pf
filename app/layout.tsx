@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Background from '@/components/Background'
+import EasterEggs from '@/components/EasterEggs'
 
 export const metadata: Metadata = {
   title: 'Mustejab Khan | QA Engineer & Automation Specialist',
@@ -43,6 +44,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased relative">
         <Background />
+        <EasterEggs />
         {children}
       </body>
     </html>
