@@ -36,14 +36,38 @@ body {
 
 .glass-hover:hover {
   background: rgba(15, 23, 42, 0.6);
-  border-color: rgba(6, 182, 212, 0.3);
-  box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+  border-color: rgba(34, 211, 238, 0.15);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.12);
 }
 
 /* Neon glow effect */
 .neon-glow {
-  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5),
-    0 0 20px rgba(168, 85, 247, 0.3);
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.35),
+    0 0 18px rgba(251, 113, 133, 0.22);
+}
+
+/* Animated background orbs */
+.bg-orbs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(36px);
+  opacity: 0.12;
+  transform: translate3d(0,0,0);
+  animation: float 12s linear infinite;
+}
+.orb.pink { background: radial-gradient(circle, rgba(251,113,133,0.45) 0%, rgba(251,113,133,0.12) 40%, transparent 60%); }
+.orb.teal { background: radial-gradient(circle, rgba(34,211,238,0.45) 0%, rgba(34,211,238,0.12) 40%, transparent 60%); }
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0) scale(1); }
+  50% { transform: translateY(-40px) translateX(20px) scale(1.05); }
+  100% { transform: translateY(0) translateX(0) scale(1); }
 }
 
 /* Smooth scrollbar */

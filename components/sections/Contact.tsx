@@ -99,7 +99,7 @@ export default function Contact() {
             variants={itemVariants}
             whileHover={{
               y: -8,
-              boxShadow: '0 20px 40px rgba(6, 182, 212, 0.3)',
+              boxShadow: '0 18px 36px rgba(34, 211, 238, 0.12)',
             }}
           >
             <div className="flex items-start gap-4 mb-4">
@@ -123,7 +123,7 @@ export default function Contact() {
             variants={itemVariants}
             whileHover={{
               y: -8,
-              boxShadow: '0 20px 40px rgba(6, 182, 212, 0.3)',
+              boxShadow: '0 18px 36px rgba(34, 211, 238, 0.12)',
             }}
           >
             <div className="flex items-start gap-4 mb-4">

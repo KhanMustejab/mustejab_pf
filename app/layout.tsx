@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Background from '@/components/Background'
 
 export const metadata: Metadata = {
   title: 'Mustejab Khan | QA Engineer & Automation Specialist',
@@ -40,7 +41,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/mustejab_pf/favicon.ico" />
       </head>
-      <body className="antialiased">
+      <body className="antialiased relative">
+        <Background />
         {children}
       </body>
     </html>

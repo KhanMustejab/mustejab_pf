@@ -101,7 +101,7 @@ export default function Hero() {
             <motion.button
               whileHover={{
                 scale: 1.05,
-                boxShadow: '0 0 30px rgba(6, 182, 212, 0.5)',
+                boxShadow: '0 0 24px rgba(34, 211, 238, 0.18)',
               }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-gradient-to-r from-neon-cyan to-neon-violet text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300"
@@ -114,8 +114,8 @@ export default function Hero() {
             <motion.button
               whileHover={{
                 scale: 1.05,
-                background: 'rgba(6, 182, 212, 0.1)',
-                borderColor: 'rgba(6, 182, 212, 0.5)',
+                background: 'rgba(34, 211, 238, 0.06)',
+                borderColor: 'rgba(34, 211, 238, 0.24)',
               }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 border-2 border-neon-cyan text-neon-cyan font-bold rounded-lg hover:shadow-lg transition-all duration-300"

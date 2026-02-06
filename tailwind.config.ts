@@ -9,8 +9,8 @@ const config: Config = {
     extend: {
       colors: {
         neon: {
-          cyan: '#06b6d4',
-          violet: '#a855f7',
+          cyan: '#22d3ee',
+          violet: '#fb7185',
         },
       },
       animation: {

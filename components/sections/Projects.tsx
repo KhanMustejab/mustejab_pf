@@ -132,7 +132,7 @@ export default function Projects() {
                 </div>
 
                 {/* Corner accent */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-neon-cyan/20 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-neon-cyan/14 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-90 transition-opacity duration-300" />
               </div>
             </motion.div>
           ))}

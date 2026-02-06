@@ -115,7 +115,7 @@ export default function Experience() {
                   className="glass glass-hover rounded-2xl p-6 md:p-8"
                   whileHover={{
                     y: -8,
-                    boxShadow: '0 20px 40px rgba(6, 182, 212, 0.2)',
+                    boxShadow: '0 18px 36px rgba(34, 211, 238, 0.10)',
                   }}
                   transition={{ duration: 0.3 }}
                 >
