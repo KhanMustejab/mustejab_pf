@@ -1,11 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 export default function EasterEggs() {
   const [showBugToast, setShowBugToast] = useState(false)
-  const [qaMode, setQaMode] = useState(false)
-  const [keySequence, setKeySequence] = useState<string[]>([])
+  const keySequenceRef = useRef<string[]>([])
 
   // Konami code: ⬆⬆⬇⬇⬅➡⬅➡ B A
   const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a']
@@ -15,19 +14,19 @@ export default function EasterEggs() {
     const handleKeyPress = (e: KeyboardEvent) => {
       const key = e.key.toLowerCase() === 'arrowup' || e.key.toLowerCase() === 'arrowdown' || e.key.toLowerCase() === 'arrowleft' || e.key.toLowerCase() === 'arrowright' ? e.key : e.key.toLowerCase()
 
-      setKeySequence((prev) => {
-        const newSequence = [...prev, key]
-        // Keep only the last 10 keys (length of Konami code)
-        const trimmedSequence = newSequence.slice(-10)
+      const prevSequence = keySequenceRef.current
+      const newSequence = [...prevSequence, key]
+      // Keep only the last 10 keys (length of Konami code)
+      const trimmedSequence = newSequence.slice(-10)
 
-        // Check if the sequence matches the Konami code
-        if (trimmedSequence.length === 10 && trimmedSequence.every((k, i) => k === konamiCode[i])) {
-          activateQaMode()
-          return []
-        }
+      // Check if the sequence matches the Konami code
+      if (trimmedSequence.length === 10 && trimmedSequence.every((k, i) => k === konamiCode[i])) {
+        activateQaMode()
+        keySequenceRef.current = []
+        return
+      }
 
-        return trimmedSequence
-      })
+      keySequenceRef.current = trimmedSequence
     }
 
     window.addEventListener('keydown', handleKeyPress)
@@ -36,22 +35,11 @@ export default function EasterEggs() {
 
   // Activate QA Mode
   const activateQaMode = () => {
-    setQaMode(true)
     document.documentElement.style.setProperty('--qa-mode-active', '1')
     document.body.classList.add('qa-mode-enabled')
 
     // Show toast notification
     showQaModeToast()
-
-    // Optional: disable after 30 seconds, or keep it on
-    // setTimeout(() => deactivateQaMode(), 30000)
-  }
-
-  // Deactivate QA Mode
-  const deactivateQaMode = () => {
-    setQaMode(false)
-    document.documentElement.style.setProperty('--qa-mode-active', '0')
-    document.body.classList.remove('qa-mode-enabled')
   }
 
   // Show QA Mode toast
