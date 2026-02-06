@@ -124,21 +124,6 @@ export default function Hero() {
             </motion.button>
           </Link>
         </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <div className="w-6 h-10 border-2 border-neon-cyan rounded-full flex justify-center p-2">
-            <motion.div
-              className="w-1 h-2 bg-neon-cyan rounded-full"
-              animate={{ y: [0, 6] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
-          </div>
-        </motion.div>
       </motion.div>
     </section>
   )
