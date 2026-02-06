@@ -113,11 +113,6 @@ export default function Experience() {
                 {/* Content Card */}
                 <motion.div
                   className="glass glass-hover rounded-2xl p-6 md:p-8"
-                  whileHover={{
-                    y: -8,
-                    boxShadow: '0 18px 36px rgba(34, 211, 238, 0.10)',
-                  }}
-                  transition={{ duration: 0.3 }}
                 >
                   {/* Header */}
                   <div className={idx % 2 === 0 ? 'md:text-right' : 'md:text-left'}>

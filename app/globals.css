@@ -35,9 +35,8 @@ body {
 }
 
 .glass-hover:hover {
-  background: rgba(15, 23, 42, 0.6);
-  border-color: rgba(34, 211, 238, 0.15);
-  box-shadow: 0 0 18px rgba(34, 211, 238, 0.12);
+  /* Only highlight the border on hover; avoid background or glow */
+  border-color: rgba(34, 211, 238, 0.32);
 }
 
 /* Neon glow effect */

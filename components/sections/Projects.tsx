@@ -89,11 +89,9 @@ export default function Projects() {
               key={idx}
               className="group relative"
               variants={cardVariants}
-              whileHover={{ y: -12 }}
-              transition={{ duration: 0.3 }}
             >
               {/* Glow background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/20 to-neon-violet/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/20 to-neon-violet/20 rounded-2xl blur-xl opacity-10" />
 
               {/* Card */}
               <div className="glass glass-hover rounded-2xl p-8 relative h-full flex flex-col">
@@ -132,7 +130,7 @@ export default function Projects() {
                 </div>
 
                 {/* Corner accent */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-neon-cyan/14 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-90 transition-opacity duration-300" />
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-neon-cyan/14 to-transparent rounded-bl-2xl opacity-30 transition-opacity duration-300" />
               </div>
             </motion.div>
           ))}

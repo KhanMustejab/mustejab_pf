@@ -97,10 +97,6 @@ export default function Contact() {
           <motion.div
             className="glass glass-hover rounded-2xl p-8 group cursor-pointer"
             variants={itemVariants}
-            whileHover={{
-              y: -8,
-              boxShadow: '0 18px 36px rgba(34, 211, 238, 0.12)',
-            }}
           >
             <div className="flex items-start gap-4 mb-4">
               <div className="text-3xl text-neon-cyan">✉</div>
@@ -121,10 +117,6 @@ export default function Contact() {
           <motion.div
             className="glass glass-hover rounded-2xl p-8 group cursor-pointer"
             variants={itemVariants}
-            whileHover={{
-              y: -8,
-              boxShadow: '0 18px 36px rgba(34, 211, 238, 0.12)',
-            }}
           >
             <div className="flex items-start gap-4 mb-4">
               <div className="text-3xl text-neon-violet">in</div>

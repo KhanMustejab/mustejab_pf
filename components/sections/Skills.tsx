@@ -97,11 +97,6 @@ export default function Skills() {
               key={idx}
               className="glass glass-hover rounded-2xl p-6 group cursor-pointer"
               variants={cardVariants}
-              whileHover={{
-                y: -8,
-                boxShadow: '0 18px 36px rgba(34, 211, 238, 0.12)',
-              }}
-              transition={{ duration: 0.3 }}
             >
               {/* Category Title */}
               <h3 className="text-2xl font-bold mb-6 text-white group-hover:text-neon-cyan transition-colors duration-300">
@@ -126,7 +121,7 @@ export default function Skills() {
               </div>
 
               {/* Glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none blur-xl bg-gradient-to-br from-neon-cyan to-neon-violet" />
+              <div className="absolute inset-0 rounded-2xl opacity-0 pointer-events-none blur-xl bg-gradient-to-br from-neon-cyan to-neon-violet" />
             </motion.div>
           ))}
         </motion.div>
